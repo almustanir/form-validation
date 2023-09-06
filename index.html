@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formContainer">
+        <h1>Register</h1>
+        <p>Already have an account? <a href="#">Login here</a></p>
+
+        <form id="registrationForm" action="https://sheetdb.io/api/v1/9p6q4ajp920af" method="post">
+            <!-- Username -->
+            <div class="formDetails">
+                <div class="username">
+                    <label for="username">Username</label>
+                    <div>
+                        <input name="data[Username]" type="text" id="username" required minlength="2" custommaxlength="6">
+                        <ion-icon name="checkmark-circle-outline" class="success-check"></ion-icon>
+                        <ion-icon name="close-circle-outline" class="error-check"></ion-icon>
+                    </div>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <!-- Email -->
+            <div class="formDetails">
+                <div class="email">
+                    <label for="email">Email</label>
+                    <div>
+                        <input name="data[Email]" type="email" id="email" pattern="^(.+)@(.+)$" required>
+                        <ion-icon name="checkmark-circle-outline" class="success-check"></ion-icon>
+                        <ion-icon name="close-circle-outline" class="error-check"></ion-icon>
+                    </div>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <!-- Password -->
+            <div class="formDetails">
+                <div class="passWord">
+                    <label for="passWord">Password</label>
+                    <div>
+                        <input name="data[Password]" type="passWord" id="Password" required>
+                        <ion-icon name="checkmark-circle-outline" class="success-check"></ion-icon>
+                        <ion-icon name="close-circle-outline" class="error-check"></ion-icon>
+                    </div>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            <!-- Confirm Password -->
+            <div class="formDetails">
+                <div class="confirmPassWord">
+                    <label for="confirmPassWord">Confirm Password</label>
+                    <div>
+                        <input name="data[Confirm Password]" type="passWord" id="confirmPassword" match="passWord" required minlength="8">
+                        <ion-icon name="checkmark-circle-outline" class="success-check"></ion-icon>
+                        <ion-icon name="close-circle-outline" class="error-check"></ion-icon>
+                    </div>
+                </div>
+                <div class="errorMessage"></div>
+            </div>
+            
+            <button>Register Now</button>
+            <div class="succM">
+
+            </div>
+        </form>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
